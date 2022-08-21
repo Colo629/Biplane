@@ -52,6 +52,7 @@ public class AircraftPhysics : MonoBehaviour
         {
             if(surface == null)
             {
+                //rewrite for damage script
                 Debug.Log("nulled");
                 aerodynamicSurfaces.Remove(surface);
                 return new BiVector3(Vector3.zero, Vector3.zero);
