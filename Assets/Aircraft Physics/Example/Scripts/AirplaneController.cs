@@ -30,6 +30,7 @@ public class AirplaneController : MonoBehaviour
     float brakesTorque;
 
     public bool testControl;
+    public bool uninvertControls = true;
 
     AircraftPhysics aircraftPhysics;
     Rigidbody rb;
@@ -48,6 +49,11 @@ public class AirplaneController : MonoBehaviour
             Roll = Input.GetAxis("Horizontal");
             Yaw = Input.GetAxis("Yaw");
 
+            if(uninvertControls == true)
+            {
+                Roll *= -1;
+                Yaw *= -1;
+            }
 
 
             if (Input.GetKeyDown(KeyCode.Space))
