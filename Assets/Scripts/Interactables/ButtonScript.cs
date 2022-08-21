@@ -5,16 +5,31 @@ using UnityEngine;
 public class ButtonScript : MonoBehaviour
 {
     public bool buttonPressed;
+    private Material shaderMat;
+    private Vector3 offScale;
+    private Vector3 onScale;
     // Start is called before the first frame update
     void Start()
     {
-        
+        shaderMat = GetComponentInChildren<MeshRenderer>().material;
+        shaderMat.EnableKeyword("_EMISSION");
+        offScale = transform.localScale;
+        onScale = new Vector3(offScale.x, offScale.y, offScale.z * 0.75f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (buttonPressed)
+        {
+            shaderMat.SetColor("_EmissionColor", Color.red);
+            transform.localScale = onScale;
+        }
+        else
+        {
+            shaderMat.SetColor("_EmissionColor", Color.black);
+            transform.localScale = offScale;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
