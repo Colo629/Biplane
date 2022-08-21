@@ -5,6 +5,8 @@ using UnityEngine;
 public class DamageScript : MonoBehaviour
 {
     public AeroSurface aeroS;
+    public bool disabled;
+    public bool test;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,26 @@ public class DamageScript : MonoBehaviour
         {
             aeroS.hp = 0;
         }
+        DisablePart();
        
     }
-
+    public void DisablePart()
+    {
+        if(aeroS.hp <= 0f)
+        {
+            disabled = true;
+        }
+        if(aeroS.hp > 0)
+        {
+            disabled = false;
+        }
+        if (!disabled)
+        {
+            aeroS.gameObject.SetActive(true);
+        }
+        if (disabled)
+        {
+            aeroS.gameObject.SetActive(false);
+        }
+    }
 }

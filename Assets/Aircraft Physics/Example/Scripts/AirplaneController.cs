@@ -42,33 +42,34 @@ public class AirplaneController : MonoBehaviour
 
     private void Update()
     {
-        if(testControl == true)
+        if (testControl == true)
         {
             Pitch = Input.GetAxis("Vertical");
             Roll = Input.GetAxis("Horizontal");
             Yaw = Input.GetAxis("Yaw");
-        }
-        
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            thrustPercent = thrustPercent > 0 ? 0 : 1f;
-        }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Flap = Flap > 0 ? 0 : 0.3f;
-        }
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            brakesTorque = brakesTorque > 0 ? 0 : 100f;
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                thrustPercent = thrustPercent > 0 ? 0 : 1f;
+            }
 
-        displayText.text = "V: " + ((int)rb.velocity.magnitude).ToString("D3") + " m/s\n";
-        displayText.text += "A: " + ((int)transform.position.y).ToString("D4") + " m\n";
-        displayText.text += "T: " + (int)(thrustPercent * 100) + "%\n";
-        displayText.text += brakesTorque > 0 ? "B: ON" : "B: OFF";
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Flap = Flap > 0 ? 0 : 0.3f;
+            }
+
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                brakesTorque = brakesTorque > 0 ? 0 : 100f;
+            }
+
+            displayText.text = "V: " + ((int)rb.velocity.magnitude).ToString("D3") + " m/s\n";
+            displayText.text += "A: " + ((int)transform.position.y).ToString("D4") + " m\n";
+            displayText.text += "T: " + (int)(thrustPercent * 100) + "%\n";
+            displayText.text += brakesTorque > 0 ? "B: ON" : "B: OFF";
+        }
     }
 
     private void FixedUpdate()
