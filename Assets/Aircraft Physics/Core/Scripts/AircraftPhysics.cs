@@ -50,12 +50,12 @@ public class AircraftPhysics : MonoBehaviour
         BiVector3 forceAndTorque = new BiVector3();
         foreach (var surface in aerodynamicSurfaces)
         {
-            if(surface == null)
+            if(surface.hp == 0)
             {
                 //rewrite for damage script
-                Debug.Log("nulled");
-                aerodynamicSurfaces.Remove(surface);
-                return new BiVector3(Vector3.zero, Vector3.zero);
+                //aerodynamicSurfaces.Remove(surface);
+                new BiVector3(Vector3.zero, Vector3.zero);
+                continue; 
             }
             Vector3 relativePosition = surface.transform.position - centerOfMass;
             forceAndTorque += surface.CalculateForces(-velocity + wind

@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class DamageScript : MonoBehaviour
 {
-    public float hp;
-    public float maxhp;
+    public AeroSurface aeroS;
     // Start is called before the first frame update
     void Start()
     {
-        
+        aeroS = transform.GetComponent<AeroSurface>();
     }
 
     // Update is called once per frame
@@ -19,14 +18,15 @@ public class DamageScript : MonoBehaviour
     }
     public void BulletDamageCalc(float damage)
     {
-        if(hp > 0)
+        if(aeroS.hp > 0)
         {
-            hp -= damage;
+            aeroS.hp -= damage;
         }
-        if(hp < 0)
+        if(aeroS.hp < 0)
         {
-            hp = 0;
+            aeroS.hp = 0;
         }
+       
     }
 
 }

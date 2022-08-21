@@ -9,9 +9,16 @@ public class AeroSurface : MonoBehaviour
     public bool IsControlSurface;
     public ControlInputType InputType;
     public float InputMultiplyer = 1;
+    
+    public float hp;
+    public float maxhp;
 
     private float flapAngle;
 
+    public void Awake()
+    {
+        hp = maxhp;
+    }
     public void SetFlapAngle(float angle)
     {
         flapAngle = Mathf.Clamp(angle, -Mathf.Deg2Rad * 50, Mathf.Deg2Rad * 50);
