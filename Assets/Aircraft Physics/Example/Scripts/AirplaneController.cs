@@ -55,6 +55,12 @@ public class AirplaneController : MonoBehaviour
                 Yaw *= -1;
             }
 
+            if (Input.GetButton("ResetMap"))
+            {
+                Vector3 targetPos = transform.position + new Vector3(0, 3000, 0);
+                GetComponent<Rigidbody>().AddForce(targetPos);
+            }
+
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
