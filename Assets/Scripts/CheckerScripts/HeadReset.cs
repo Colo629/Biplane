@@ -32,7 +32,7 @@ public class HeadReset : MonoBehaviour
     public void ResetHeadPos()
     {
         cameraRig.position = targetPosition.position;
-        cameraRig.localPosition = cameraRig.localPosition - headset.localPosition;
+        //cameraRig.position = headset.localPosition;
        // cameraRig.position -= headset.position;
         /*storedPosHead = headset.localPosition;
         storedCameraPos = cameraRig.localPosition;
