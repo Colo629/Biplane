@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class LandingScript : MonoBehaviour
 {
-    public float landingWeight = 50;
+    public float landingWeight = 300;
     public float startingWeight;
     public float maxWeight;
     public Rigidbody rb;
     public bool startLand;
     public AirplaneController ac;
+    public float weightClamp;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,11 @@ public class LandingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // if(ac.thrustPercent)
+        if(ac.thrustPercent > 0.9f)
+        {
+            startLand = false;
+            TakeOff();
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -39,8 +44,13 @@ public class LandingScript : MonoBehaviour
     }
     void Landing()
     {
-        rb.mass = landingWeight * Time.fixedDeltaTime;
-        Mathf.Clamp(rb.mass , startingWeight, maxWeight);
+        float weight = (landingWeight * Time.fixedDeltaTime) + rb.mass;
+        rb.mass = Mathf.Clamp(weight , startingWeight, maxWeight);
+    }
+    void TakeOff()
+    {
+        startLand = false;
+        rb.mass = startingWeight;
     }
 
 }

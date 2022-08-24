@@ -19,7 +19,7 @@ public class CockpitManager : MonoBehaviour
     public SteamVR_Action_Vector2 rightRotatePress;
     public float ammoCount;
     public bool engineOn;
-    public float landingWeight;
+    
 
     
     // Start is called before the first frame update
