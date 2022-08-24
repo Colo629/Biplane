@@ -36,19 +36,7 @@ public class HeadReset : MonoBehaviour
         cameraRig.position += offset;
 
 
-        //cameraRig.position = targetPosition.position;
-        //cameraRig.position = headset.localPosition;
-       // cameraRig.position -= headset.position;
-        /*storedPosHead = headset.localPosition;
-        storedCameraPos = cameraRig.localPosition;
-        
-        headset.position = targetPosition.position;*/
-        //cameraRig.localPosition = storedPosHead - headset.localPosition;
-       // headset.position = targetPosition.position;
-        /*headset.position = targetPosition.position;
-        storedPosHead -= headset.localPosition;
-        cameraRig.localPosition += storedPosHead;
-        headset.position = targetPosition.position;*/
+       
 
     }
 }
