@@ -20,15 +20,14 @@ public class CockpitManager : MonoBehaviour
     public float ammoCount;
     public bool engineOn;
 
-    public static CockpitManager cockpitManager;
-
     private void Awake()
     {
-        cockpitManager = this;
+        
     }
     // Start is called before the first frame update
     void Start()
     {
+        
         //x = rotation -0.15-0.5 y - rotation?
         //z = pull 0-0.25f 0.25 is towards the pilot not away
         //8
