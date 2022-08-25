@@ -19,9 +19,13 @@ public class CockpitManager : MonoBehaviour
     public SteamVR_Action_Vector2 rightRotatePress;
     public float ammoCount;
     public bool engineOn;
-    
 
-    
+    public static CockpitManager cockpitManager;
+
+    private void Awake()
+    {
+        cockpitManager = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
