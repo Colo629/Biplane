@@ -12,7 +12,7 @@ public class ExplosiveProjectile : BulletScript
     void Start()
     {
         worldVelocity = transform.forward * velocity;
-        calculateBullet();
+        //calculateBullet();
         startTime = Time.time;
     }
 

@@ -33,7 +33,7 @@ public class AirplaneController : MonoBehaviour
     public bool uninvertControls = true;
 
     AircraftPhysics aircraftPhysics;
-    Rigidbody rb;
+    public Rigidbody rb;
 
     private void Start()
     {
