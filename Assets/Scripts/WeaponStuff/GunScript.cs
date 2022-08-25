@@ -35,11 +35,10 @@ public class GunScript : MonoBehaviour
             Quaternion aimVector = Quaternion.RotateTowards(transform.rotation, Random.rotation, dispersionValue);
             GameObject instBullet = Instantiate(bullet, transform.position, aimVector) as GameObject;
             cm.ammoCount -= 1f;
-            ap.Play();
-            //edditted out the doubleshoot code
-          /*  Quaternion aimVector1 = Quaternion.RotateTowards(transform.rotation, Random.rotation, dispersionValue); 
-            GameObject instBullet1 = Instantiate(bullet, transform.position, aimVector1) as GameObject;
-            cm.ammoCount -= 1f;*/
+            if(ap != null)
+            {
+                ap.Play();
+            }
         }
     }
     IEnumerator Shoot()

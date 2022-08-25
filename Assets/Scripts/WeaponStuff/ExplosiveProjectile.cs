@@ -2,20 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class BulletScript : MonoBehaviour
+public class ExplosiveProjectile : BulletScript
 {
-
-    public float velocity = 400f;
-    public float drag;
-    public ParticleSystem hitExplosion;
-    public float damage;
-    public float velocityY;
-    public Vector3 worldVelocity;
-    public float gravity = 9.81f;
-    public ParticleSystem explosion;
-    public float startTime;
+    public GameObject explosionObject;
     // Start is called before the first frame update
+
+
+    // Update is called once per frame
     void Start()
     {
         worldVelocity = transform.forward * velocity;
@@ -23,10 +16,8 @@ public class BulletScript : MonoBehaviour
         startTime = Time.time;
     }
 
-    // Update is called once per frame
-    public virtual void calculateBullet()
+    public override void calculateBullet()
     {
-
         velocityY -= gravity * Time.deltaTime;
         Vector3 currentVelocity = worldVelocity + new Vector3(0, velocityY, 0);
         Vector3 newPos = transform.position + (currentVelocity * Time.deltaTime);
@@ -34,20 +25,11 @@ public class BulletScript : MonoBehaviour
         Physics.Raycast(transform.position, currentVelocity, out hit, (currentVelocity.magnitude * Time.deltaTime), (1 << 25) + (1 << 15), QueryTriggerInteraction.Ignore); //add bitshift in partenthesnes
         if (hit.collider != null)
         {
-            if (hit.collider.gameObject.tag == "damageable")
-            {
-                hit.collider.gameObject.GetComponent<DamageScript>().BulletDamageCalc(damage);
-                damage = 0;
-                transform.position = hit.point;
-            }
+            Instantiate(explosionObject , transform.position , Quaternion.identity);
             Instantiate(hitExplosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         transform.position = newPos;
-    }
-    void FixedUpdate()
-    {
-        calculateBullet();
     }
     void Update()
     {
@@ -56,5 +38,9 @@ public class BulletScript : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+    }
+    void FixedUpdate()
+    {
+        calculateBullet();
     }
 }
