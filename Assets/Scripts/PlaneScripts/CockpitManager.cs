@@ -17,7 +17,6 @@ public class CockpitManager : MonoBehaviour
     public AirplaneController ac;
     public SteamVR_Action_Single rightTrigger;
     public SteamVR_Action_Vector2 rightRotatePress;
-    public float ammoCount;
     public bool engineOn;
 
     private void Awake()

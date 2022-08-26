@@ -2160,6 +2160,7 @@ MonoBehaviour:
   thrustPercent: 0
   testControl: 0
   uninvertControls: 1
+  rb: {fileID: 0}
 --- !u!114 &6731628543531367034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,7 +2189,6 @@ MonoBehaviour:
   rightRotatePress:
     actionPath: /actions/default/in/rightRotatePress
     needsReinit: 0
-  ammoCount: 60
   engineOn: 0
 --- !u!114 &4434347930025989987
 MonoBehaviour:
@@ -3445,10 +3445,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 6731628543531367034}
   bullet: {fileID: 400318450633173485, guid: 8e2fec13151d9a342bdb894c2752b3e0, type: 3}
+  ammo: 60
   dispersionValue: 0.2
   fireRPM: 400
   startedRoutine: 0
-  ap: {fileID: 1653766027}
+  ap: {fileID: 0}
+  debugFireButton: DebugFire
 --- !u!82 &1653766028
 AudioSource:
   m_ObjectHideFlags: 0
