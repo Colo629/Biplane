@@ -1855,6 +1855,7 @@ MonoBehaviour:
   thrustPercent: 0
   testControl: 0
   uninvertControls: 1
+  rb: {fileID: 0}
 --- !u!114 &8924756024483452001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,7 +1884,6 @@ MonoBehaviour:
   rightRotatePress:
     actionPath: /actions/default/in/rightRotatePress
     needsReinit: 0
-  ammoCount: 500
   engineOn: 0
 --- !u!114 &1961706717615765880
 MonoBehaviour:
@@ -4658,10 +4658,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 8924756024483452001}
   bullet: {fileID: 5063832658384639587, guid: 59ec205cd4a440f42863f54a2c2e85e8, type: 3}
+  ammo: 250
   dispersionValue: 0.5
   fireRPM: 300
   startedRoutine: 0
-  ap: {fileID: 5966109559341117148}
+  ap: {fileID: 0}
+  debugFireButton: DebugFire
 --- !u!114 &5966109559341117148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4684,9 +4686,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 89b269e4855173b4e89e77efc10bc5ad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6638463fdb103104ab33b73506719aa0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.463
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4817,10 +4819,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 8924756024483452001}
   bullet: {fileID: 5063832658384639587, guid: 59ec205cd4a440f42863f54a2c2e85e8, type: 3}
+  ammo: 250
   dispersionValue: 0.5
   fireRPM: 300
   startedRoutine: 0
-  ap: {fileID: 5966109559275623028}
+  ap: {fileID: 0}
+  debugFireButton: DebugFire
 --- !u!114 &5966109559275623028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4843,9 +4847,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 89b269e4855173b4e89e77efc10bc5ad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6638463fdb103104ab33b73506719aa0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.463
   m_Pitch: 1
   Loop: 0
   Mute: 0

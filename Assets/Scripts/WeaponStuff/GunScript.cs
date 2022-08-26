@@ -10,7 +10,7 @@ public class GunScript : MonoBehaviour
     public float dispersionValue;
     public float fireRPM;
     public bool startedRoutine;
-    public AudioSource ap;
+    public AudioSource ap = null;
 
     public string debugFireButton = "DebugFire";
     private float lastFiredTime;
@@ -55,17 +55,13 @@ public class GunScript : MonoBehaviour
     }
     public void fireGun(float skippedTime)
     {
-        if (cm.ammoCount > 0)
-        {
             Quaternion aimVector = Quaternion.RotateTowards(transform.rotation, Random.rotation, dispersionValue);
             BulletScript instBullet = Instantiate(bullet, transform.position, aimVector).GetComponent<BulletScript>();
             instBullet.SpinUpProjectile(cm.ac.rb.velocity, skippedTime);
-            cm.ammoCount -= 1f;
             if(ap != null)
             {
                 if(ap.isPlaying == false) { ap.Play(); }
                 ap.loop = true;
             }
-        }
     }
 }
