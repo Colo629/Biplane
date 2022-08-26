@@ -14,7 +14,7 @@ public class GunScript : MonoBehaviour
 
     public string debugFireButton = "DebugFire";
     private float lastFiredTime;
-    private bool firing;
+    public bool firing;
     
 
     // Start is called before the first frame update
