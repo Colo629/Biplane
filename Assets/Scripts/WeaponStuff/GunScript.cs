@@ -10,7 +10,7 @@ public class GunScript : MonoBehaviour
     public float dispersionValue;
     public float fireRPM;
     public bool startedRoutine;
-    public AudioPlayer ap;
+    public AudioSource ap;
 
     public string debugFireButton = "DebugFire";
     private float lastFiredTime;
@@ -20,7 +20,7 @@ public class GunScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ap = transform.GetComponent<AudioPlayer>();
+        ap = transform.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,6 +50,7 @@ public class GunScript : MonoBehaviour
         else
         {
             firing = false;
+            ap.loop = false;
         }
     }
     public void fireGun(float skippedTime)
@@ -62,7 +63,8 @@ public class GunScript : MonoBehaviour
             cm.ammoCount -= 1f;
             if(ap != null)
             {
-                ap.Play();
+                if(ap.isPlaying == false) { ap.Play(); }
+                ap.loop = true;
             }
         }
     }
