@@ -4872,8 +4872,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7996229171916110758}
-  - component: {fileID: 2466303053791679990}
   - component: {fileID: 6476866211330310865}
+  - component: {fileID: 8492009247588002019}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -4895,20 +4895,6 @@ Transform:
   m_Father: {fileID: 2197066182171332326}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2466303053791679990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7202633324299690933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d47a5882388927f46a321fadb66205cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 110
-  explosionRadius: 45
 --- !u!135 &6476866211330310865
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4922,3 +4908,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8492009247588002019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7202633324299690933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d09cdee1261832b488861a4b5ee9974d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 110
+  explosionRadius: 45
+  maxDamage: 150
+  minDamage: 20
