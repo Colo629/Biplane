@@ -1844,6 +1844,7 @@ GameObject:
   - component: {fileID: 1579115957719437982}
   - component: {fileID: 8433093745693802375}
   - component: {fileID: 870405431622867563}
+  - component: {fileID: 2631641011441102292}
   m_Layer: 0
   m_Name: MinigunPlane
   m_TagString: Untagged
@@ -2009,6 +2010,18 @@ MonoBehaviour:
   resetButton:
     actionPath: /actions/default/in/HeadResetButton
     needsReinit: 0
+--- !u!114 &2631641011441102292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331511082916794026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306dc6ffc041eb547bcca94cdf2518c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2331511082989757533
 GameObject:
   m_ObjectHideFlags: 0

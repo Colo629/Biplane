@@ -71,6 +71,12 @@ public class AeroSurface : MonoBehaviour
         Vector3 lift = liftDirection * aerodynamicCoefficients.x * dynamicPressure * area;
         Vector3 drag = dragDirection * aerodynamicCoefficients.y * dynamicPressure * area;
         Vector3 torque = -transform.forward * aerodynamicCoefficients.z * dynamicPressure * area * config.chord;
+        //attempting to do damage stuff
+        lift *= (hp / maxhp);
+        if(hp > 0)
+        {
+            drag /= (hp / maxhp);
+        }
 
         forceAndTorque.p += lift + drag;
         forceAndTorque.q += Vector3.Cross(relativePosition, forceAndTorque.p);
