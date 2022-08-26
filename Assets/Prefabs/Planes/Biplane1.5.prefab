@@ -4503,6 +4503,7 @@ GameObject:
   - component: {fileID: 6768803563747787181}
   - component: {fileID: 4399424708550126772}
   - component: {fileID: 4904972235579771224}
+  - component: {fileID: 8930230933480986121}
   m_Layer: 0
   m_Name: Biplane1.5
   m_TagString: Untagged
@@ -4635,7 +4636,6 @@ MonoBehaviour:
   rightRotatePress:
     actionPath: /actions/default/in/rightRotatePress
     needsReinit: 0
-  ammoCount: 1000
   engineOn: 0
 --- !u!114 &4399424708550126772
 MonoBehaviour:
@@ -4669,6 +4669,18 @@ MonoBehaviour:
   resetButton:
     actionPath: /actions/default/in/HeadResetButton
     needsReinit: 0
+--- !u!114 &8930230933480986121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520601913976757657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306dc6ffc041eb547bcca94cdf2518c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7520601913985944025
 GameObject:
   m_ObjectHideFlags: 0

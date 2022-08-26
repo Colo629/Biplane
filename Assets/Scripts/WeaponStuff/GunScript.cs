@@ -64,5 +64,6 @@ public class GunScript : MonoBehaviour
                 if(ap.isPlaying == false) { ap.Play(); }
                 ap.loop = true;
             }
+            
     }
 }

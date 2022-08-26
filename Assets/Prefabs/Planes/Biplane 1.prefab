@@ -931,6 +931,7 @@ GameObject:
   - component: {fileID: 3941423480607260367}
   - component: {fileID: 6219686907444171734}
   - component: {fileID: 3408335953432786490}
+  - component: {fileID: 8990756494545662955}
   m_Layer: 0
   m_Name: Biplane 1
   m_TagString: Untagged
@@ -1034,6 +1035,7 @@ MonoBehaviour:
   thrustPercent: 0
   testControl: 0
   uninvertControls: 1
+  rb: {fileID: 0}
 --- !u!114 &3941423480607260367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1064,6 @@ MonoBehaviour:
   rightRotatePress:
     actionPath: /actions/default/in/rightRotatePress
     needsReinit: 0
-  ammoCount: 1000
   engineOn: 0
 --- !u!114 &6219686907444171734
 MonoBehaviour:
@@ -1096,6 +1097,18 @@ MonoBehaviour:
   resetButton:
     actionPath: /actions/default/in/HeadResetButton
     needsReinit: 0
+--- !u!114 &8990756494545662955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217204842066240251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306dc6ffc041eb547bcca94cdf2518c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &217204842230579481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,10 +5275,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 3941423480607260367}
   bullet: {fileID: 3143538095749691715, guid: e99d4f93b3e993b4baa96e26f44698cc, type: 3}
+  ammo: 0
   dispersionValue: 0.5
   fireRPM: 1000
   startedRoutine: 0
   ap: {fileID: 0}
+  debugFireButton: DebugFire
 --- !u!114 &643097429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5421,10 +5436,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 3941423480607260367}
   bullet: {fileID: 3143538095749691715, guid: e99d4f93b3e993b4baa96e26f44698cc, type: 3}
+  ammo: 0
   dispersionValue: 0.5
   fireRPM: 1000
   startedRoutine: 0
   ap: {fileID: 0}
+  debugFireButton: DebugFire
 --- !u!114 &643097431
 MonoBehaviour:
   m_ObjectHideFlags: 0

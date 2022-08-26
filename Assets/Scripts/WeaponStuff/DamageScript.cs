@@ -10,7 +10,7 @@ public class DamageScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        aeroS = transform.GetComponent<AeroSurface>();
+        StartDamageable();
     }
 
     // Update is called once per frame
@@ -18,7 +18,12 @@ public class DamageScript : MonoBehaviour
     {
         
     }
-    public void BulletDamageCalc(float damage)
+
+    protected virtual void StartDamageable()
+    {
+        aeroS = transform.GetComponent<AeroSurface>();
+    }
+    public virtual void BulletDamageCalc(float damage)
     {
         if(aeroS.hp > 0)
         {

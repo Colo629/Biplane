@@ -2059,6 +2059,7 @@ GameObject:
   - component: {fileID: 6731628543531367034}
   - component: {fileID: 4434347930025989987}
   - component: {fileID: 8570463885795722099}
+  - component: {fileID: -214426839260825166}
   m_Layer: 0
   m_Name: Biplane20mm
   m_TagString: Untagged
@@ -2222,6 +2223,18 @@ MonoBehaviour:
   resetButton:
     actionPath: /actions/default/in/HeadResetButton
     needsReinit: 0
+--- !u!114 &-214426839260825166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4434347930025989986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306dc6ffc041eb547bcca94cdf2518c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4434347930035700514
 GameObject:
   m_ObjectHideFlags: 0

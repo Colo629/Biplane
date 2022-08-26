@@ -8,6 +8,8 @@ public class ButtonScript : MonoBehaviour
     private Material shaderMat;
     private Vector3 offScale;
     private Vector3 onScale;
+    private float flipDelay = 0.5f;
+    private float lastFlipTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +35,7 @@ public class ButtonScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (Time.time < lastFlipTime + flipDelay) { return; }
         if (buttonPressed == false)
         {
             buttonPressed = true;
@@ -44,6 +46,5 @@ public class ButtonScript : MonoBehaviour
             buttonPressed = false;
             return;
         }
-        
     }
 }

@@ -87,7 +87,11 @@ public class BulletScript : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "damageable")
             {
-                hit.collider.gameObject.GetComponent<DamageScript>().BulletDamageCalc(damage);
+                DamageScript damageScript = hit.collider.gameObject.GetComponent<DamageScript>();
+                if (damageScript == null) { damageScript = hit.collider.gameObject.GetComponentInParent<DamageScript>(); }
+                if (damageScript == null) { damageScript = hit.collider.gameObject.GetComponentInChildren<DamageScript>(); }
+
+                damageScript.BulletDamageCalc(damage);
                 damage = 0;
                 transform.position = hit.point;
             }

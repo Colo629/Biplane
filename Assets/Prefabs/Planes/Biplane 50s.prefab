@@ -1493,6 +1493,7 @@ GameObject:
   - component: {fileID: 9137039458032387924}
   - component: {fileID: 2175013726944406093}
   - component: {fileID: 7626905533216290212}
+  - component: {fileID: -5195933868274401246}
   m_Layer: 0
   m_Name: Biplane 50s
   m_TagString: Untagged
@@ -1656,6 +1657,18 @@ MonoBehaviour:
   resetButton:
     actionPath: /actions/default/in/HeadResetButton
     needsReinit: 0
+--- !u!114 &-5195933868274401246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175013726944406092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306dc6ffc041eb547bcca94cdf2518c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2175013727046219423
 GameObject:
   m_ObjectHideFlags: 0

@@ -2359,6 +2359,7 @@ GameObject:
   - component: {fileID: 6682207952351472426}
   - component: {fileID: 4348651185462445619}
   - component: {fileID: 8657391438065574390}
+  - component: {fileID: -1133463646456030836}
   m_Layer: 0
   m_Name: EinDecker
   m_TagString: Untagged
@@ -2452,6 +2453,7 @@ MonoBehaviour:
   thrustPercent: 0
   testControl: 0
   uninvertControls: 1
+  rb: {fileID: 0}
 --- !u!114 &6682207952351472426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,7 +2482,6 @@ MonoBehaviour:
   rightRotatePress:
     actionPath: /actions/default/in/rightRotatePress
     needsReinit: 0
-  ammoCount: 30
   engineOn: 0
 --- !u!114 &4348651185462445619
 MonoBehaviour:
@@ -2514,6 +2515,18 @@ MonoBehaviour:
   resetButton:
     actionPath: /actions/default/in/HeadResetButton
     needsReinit: 0
+--- !u!114 &-1133463646456030836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4348651185462445618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306dc6ffc041eb547bcca94cdf2518c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4348651185543467634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4236,10 +4249,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 6682207952351472426}
   bullet: {fileID: 6762071133209658118, guid: b40dc25605676324cb150890bc880204, type: 3}
+  ammo: 0
   dispersionValue: 0
   fireRPM: 30
   startedRoutine: 0
   ap: {fileID: 0}
+  debugFireButton: DebugFire
 --- !u!1 &5623395081078864346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4285,10 +4300,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 6682207952351472426}
   bullet: {fileID: 6762071133209658118, guid: b40dc25605676324cb150890bc880204, type: 3}
+  ammo: 0
   dispersionValue: 0
   fireRPM: 30
   startedRoutine: 0
   ap: {fileID: 0}
+  debugFireButton: DebugFire
 --- !u!1 &5623395081244697926
 GameObject:
   m_ObjectHideFlags: 0

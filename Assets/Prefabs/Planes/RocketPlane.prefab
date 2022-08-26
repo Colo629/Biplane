@@ -1974,6 +1974,7 @@ GameObject:
   - component: {fileID: 1596100632822624337}
   - component: {fileID: 8557972466369699144}
   - component: {fileID: 1141686323688257700}
+  - component: {fileID: 2887694052866683318}
   m_Layer: 0
   m_Name: RocketPlane
   m_TagString: Untagged
@@ -2139,6 +2140,18 @@ MonoBehaviour:
   resetButton:
     actionPath: /actions/default/in/HeadResetButton
     needsReinit: 0
+--- !u!114 &2887694052866683318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564633357636594789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306dc6ffc041eb547bcca94cdf2518c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2564633357790820702
 GameObject:
   m_ObjectHideFlags: 0
