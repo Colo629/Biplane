@@ -38,11 +38,12 @@ public class GunScript : MonoBehaviour
         {
             while (timeSinceFired > fireDelay)
             {
-                float skippedTime = timeSinceFired; //for projectile advancement
+                float skippedTime = timeSinceFired-fireDelay; //for projectile advancement
                 timeSinceFired -= fireDelay;
                 if (ammo <= 0) { firing = false; return; }
                 ammo -= 1;
                 lastFiredTime = Time.time;
+                Debug.Log(skippedTime);
                 if (firing != true) { firing = true; fireGun(0); break; }
                 else { fireGun(skippedTime); }
             }
