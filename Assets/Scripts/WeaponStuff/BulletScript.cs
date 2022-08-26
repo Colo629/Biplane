@@ -16,17 +16,18 @@ public class BulletScript : MonoBehaviour
     public float gravity = 9.81f;
     public ParticleSystem explosion;
     public float startTime;
+    public TrailRenderer bulletTrail;
+    public float trailBuildTime = 1f;
 
     public bool visualOnly = false;
     private bool physFrame = false;
-    private float lastMovementTime;
     private Vector3 lastCastPos;
     private float skipTime = 0;
     // Start is called before the first frame update
     void Start()
     {
         worldVelocity = transform.forward * velocity;
-        calculateBullet();
+        //calculateBullet();
         startTime = Time.time;
     }
 
@@ -40,6 +41,16 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     public virtual void calculateBullet()
     {
+
+        if (bulletTrail != null)
+        {
+            if (Time.time < startTime + trailBuildTime)
+            {
+                bulletTrail.widthMultiplier = (Time.time - startTime) / trailBuildTime;
+            }
+        }
+
+
         Vector3 currentVelocity = new Vector3();
         Vector3 newPos = new Vector3();
 
