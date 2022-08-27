@@ -500,7 +500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875473504701973428}
   m_LocalRotation: {x: -0.70710707, y: 0.7071066, z: -0.00000008195638, w: -0.00000006816029}
-  m_LocalPosition: {x: 0.22, y: 0.19399628, z: 0.3730002}
+  m_LocalPosition: {x: 0.22, y: 0.33399567, z: 0.37300047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5559703129468509620}
@@ -3710,7 +3710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4621247389995893059}
   m_LocalRotation: {x: -0.70710707, y: 0.7071066, z: -0.00000008195638, w: -0.00000006816029}
-  m_LocalPosition: {x: -0.22, y: 0.194, z: 0.37}
+  m_LocalPosition: {x: -0.22, y: 0.334, z: 0.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2511794561067471246}
@@ -5651,6 +5651,7 @@ MonoBehaviour:
   startedRoutine: 0
   ap: {fileID: 0}
   debugFireButton: DebugFire
+  firing: 0
 --- !u!82 &1122687608
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5829,6 +5830,7 @@ MonoBehaviour:
   startedRoutine: 0
   ap: {fileID: 0}
   debugFireButton: DebugFire
+  firing: 0
 --- !u!82 &2008883472
 AudioSource:
   m_ObjectHideFlags: 0

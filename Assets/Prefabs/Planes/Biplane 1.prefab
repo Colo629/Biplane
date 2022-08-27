@@ -3044,7 +3044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220790992333868330}
   m_LocalRotation: {x: -0.70710707, y: 0.7071066, z: -0.00000008195638, w: -0.00000006816029}
-  m_LocalPosition: {x: 0.22, y: 0.19399628, z: 0.3730002}
+  m_LocalPosition: {x: 0.22, y: 0.3050039, z: 0.39899948}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 816019051773560422}
@@ -4604,7 +4604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6968540663457091549}
   m_LocalRotation: {x: -0.70710707, y: 0.7071066, z: -0.00000008195638, w: -0.00000006816029}
-  m_LocalPosition: {x: -0.22, y: 0.194, z: 0.37}
+  m_LocalPosition: {x: -0.22, y: 0.305, z: 0.396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 166471610264379152}
@@ -5275,12 +5275,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 3941423480607260367}
   bullet: {fileID: 3143538095749691715, guid: e99d4f93b3e993b4baa96e26f44698cc, type: 3}
-  ammo: 0
+  ammo: 1000
   dispersionValue: 0.5
   fireRPM: 1000
   startedRoutine: 0
   ap: {fileID: 0}
   debugFireButton: DebugFire
+  firing: 0
 --- !u!114 &643097429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5303,9 +5304,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 89b269e4855173b4e89e77efc10bc5ad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6638463fdb103104ab33b73506719aa0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.297
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5436,12 +5437,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cm: {fileID: 3941423480607260367}
   bullet: {fileID: 3143538095749691715, guid: e99d4f93b3e993b4baa96e26f44698cc, type: 3}
-  ammo: 0
+  ammo: 1000
   dispersionValue: 0.5
   fireRPM: 1000
   startedRoutine: 0
   ap: {fileID: 0}
   debugFireButton: DebugFire
+  firing: 0
 --- !u!114 &643097431
 MonoBehaviour:
   m_ObjectHideFlags: 0
