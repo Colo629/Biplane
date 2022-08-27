@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 1941846364903292652}
   - component: {fileID: 1941846364903292649}
   - component: {fileID: 1941846364903292654}
+  - component: {fileID: 4602766866840390632}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -827,6 +828,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4602766866840390632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941846364903292653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &2347715522765691884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,6 +1119,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &3612609156014584607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1197,6 +1241,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2564633356134937125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1282,7 @@ GameObject:
   - component: {fileID: 2564633356134937130}
   - component: {fileID: 2564633356134937129}
   - component: {fileID: 2564633356134937128}
+  - component: {fileID: 4606253743629299176}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -1278,6 +1353,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4606253743629299176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564633356134937125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &2564633356291414185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,6 +1411,7 @@ GameObject:
   - component: {fileID: 2564633356308292513}
   - component: {fileID: 2564633356308292516}
   - component: {fileID: 2564633356308292519}
+  - component: {fileID: 6020652771146246880}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
@@ -1393,6 +1482,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6020652771146246880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564633356308292512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &2564633356911054078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,6 +1576,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2564633357085859145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1617,7 @@ GameObject:
   - component: {fileID: 2564633357085859150}
   - component: {fileID: 2564633357085859149}
   - component: {fileID: 2564633357085859148}
+  - component: {fileID: 979687857782386519}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -1555,6 +1688,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &979687857782386519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564633357085859145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &2564633357128480121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1768,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &3612609156398269412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1715,6 +1891,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2564633357439862418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1798,6 +2004,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2564633357602240549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,6 +2114,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2564633357604712630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,6 +2225,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2564633357636594789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,6 +2608,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &3612609157620961250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3805,6 +4131,7 @@ GameObject:
   - component: {fileID: 5078685488339965814}
   - component: {fileID: 5078685488339965808}
   - component: {fileID: 5078685488339965815}
+  - component: {fileID: 1222292402853798563}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -3875,6 +4202,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1222292402853798563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078685488339965813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &5078685488345567425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3955,6 +4295,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5078685488471565218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,6 +4336,7 @@ GameObject:
   - component: {fileID: 5078685488471565219}
   - component: {fileID: 5078685488471565245}
   - component: {fileID: 5078685488471565244}
+  - component: {fileID: 5920872350870624659}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -4037,6 +4408,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5920872350870624659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078685488471565218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &5078685488552134016
 GameObject:
   m_ObjectHideFlags: 0
@@ -4118,6 +4502,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5078685488855131332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4198,6 +4612,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5078685488927758618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4209,6 +4653,7 @@ GameObject:
   - component: {fileID: 5078685488927758619}
   - component: {fileID: 5078685488927758613}
   - component: {fileID: 5078685488927758612}
+  - component: {fileID: 338089245104511423}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -4280,6 +4725,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &338089245104511423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078685488927758618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &5078685489314375968
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,6 +4819,36 @@ MonoBehaviour:
   aeroS: {fileID: 0}
   disabled: 0
   test: 0
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.9702604, g: 0.9702604, b: 0.9702604, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 16191
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  storedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5078685489324755932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4372,6 +4860,7 @@ GameObject:
   - component: {fileID: 5078685489324755933}
   - component: {fileID: 5078685489324755935}
   - component: {fileID: 5078685489324755934}
+  - component: {fileID: 3432615478919733690}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -4443,6 +4932,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3432615478919733690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078685489324755932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &5078685489438619440
 GameObject:
   m_ObjectHideFlags: 0
@@ -4454,6 +4956,7 @@ GameObject:
   - component: {fileID: 5078685489438619441}
   - component: {fileID: 5078685489438619443}
   - component: {fileID: 5078685489438619442}
+  - component: {fileID: 5029282629513935253}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -4525,6 +5028,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5029282629513935253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078685489438619440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &5095959546354274228
 GameObject:
   m_ObjectHideFlags: 0
@@ -6367,6 +6883,7 @@ GameObject:
   - component: {fileID: 8564517772548089483}
   - component: {fileID: 8564517772548089480}
   - component: {fileID: 8564517772548089481}
+  - component: {fileID: 7771436980057254268}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -6438,6 +6955,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7771436980057254268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564517772548089484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &8564517772624308756
 GameObject:
   m_ObjectHideFlags: 0
@@ -6577,6 +7107,7 @@ GameObject:
   - component: {fileID: 8564517773677406407}
   - component: {fileID: 8564517773677406404}
   - component: {fileID: 8564517773677406405}
+  - component: {fileID: 2933727558150849416}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -6648,6 +7179,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2933727558150849416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564517773677406424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &8564517773812654029
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,6 +7203,7 @@ GameObject:
   - component: {fileID: 8564517773812654028}
   - component: {fileID: 8564517773812654025}
   - component: {fileID: 8564517773812654026}
+  - component: {fileID: 1402937581281169152}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -6730,6 +7275,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1402937581281169152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564517773812654029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &8564517774041074911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,6 +7348,7 @@ GameObject:
   - component: {fileID: 8564517774103142507}
   - component: {fileID: 8564517774103142504}
   - component: {fileID: 8564517774103142505}
+  - component: {fileID: 8760575444640642958}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -6861,6 +7420,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8760575444640642958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8564517774103142508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1937322d1649407449a07d7120bfdf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageScr: {fileID: 0}
 --- !u!1 &9082289202023108693
 GameObject:
   m_ObjectHideFlags: 0
