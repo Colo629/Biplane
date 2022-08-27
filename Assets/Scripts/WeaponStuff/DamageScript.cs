@@ -7,6 +7,9 @@ public class DamageScript : MonoBehaviour
     public AeroSurface aeroS;
     public bool disabled;
     public bool test;
+    public Gradient gradient;
+    public Color storedColor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +19,12 @@ public class DamageScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateGradient();
     }
-
+    void UpdateGradient()
+    {
+        storedColor = gradient.Evaluate(aeroS.hp / aeroS.maxhp);
+    }
     protected virtual void StartDamageable()
     {
         aeroS = transform.GetComponent<AeroSurface>();
@@ -34,7 +40,7 @@ public class DamageScript : MonoBehaviour
             aeroS.hp = 0;
         }
         DisablePart();
-       
+        UpdateGradient();
     }
     public void DisablePart()
     {
