@@ -14,6 +14,7 @@ public class DamageScript : MonoBehaviour
     void Start()
     {
         StartDamageable();
+        UpdateGradient();
     }
 
     // Update is called once per frame
