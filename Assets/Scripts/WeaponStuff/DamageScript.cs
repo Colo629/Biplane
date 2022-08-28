@@ -9,12 +9,16 @@ public class DamageScript : MonoBehaviour
     public bool test;
     public Gradient gradient;
     public Color storedColor;
+    public bool ignoreGradient;
 
     // Start is called before the first frame update
     void Start()
     {
         StartDamageable();
-        UpdateGradient();
+        if (!ignoreGradient)
+        {
+            UpdateGradient();
+        }
     }
 
     // Update is called once per frame
@@ -24,7 +28,7 @@ public class DamageScript : MonoBehaviour
     }
     void UpdateGradient()
     {
-        storedColor = gradient.Evaluate(aeroS.hp / aeroS.maxhp);
+            storedColor = gradient.Evaluate(aeroS.hp / aeroS.maxhp);
     }
     protected virtual void StartDamageable()
     {
