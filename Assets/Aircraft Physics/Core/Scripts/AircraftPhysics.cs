@@ -52,7 +52,7 @@ public class AircraftPhysics : MonoBehaviour
         BiVector3 forceAndTorque = new BiVector3();
         foreach (var surface in aerodynamicSurfaces)
         {
-            if(surface.hp == 0)
+            if(surface.GetHp() == 0) //this code isn't commented out, it's grey because of conditional compiling (it IS still active)
             {
                 //rewrite for damage script
                 //aerodynamicSurfaces.Remove(surface);

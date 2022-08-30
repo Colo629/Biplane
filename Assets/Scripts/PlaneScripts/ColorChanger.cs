@@ -13,6 +13,7 @@ public class ColorChanger : MonoBehaviour
         thisRenderer = GetComponent<Renderer>();
         damageScr = GetComponentInParent<DamageScript>();
         thisMaterial = thisRenderer.material;
+
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class ColorChanger : MonoBehaviour
     }
     public void UpdateColor()
     {
+        if(damageScr == null) { return; }
         thisMaterial.color = damageScr.storedColor;
     }
 }

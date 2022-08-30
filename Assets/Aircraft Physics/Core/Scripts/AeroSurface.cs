@@ -9,19 +9,26 @@ public class AeroSurface : MonoBehaviour
     public bool IsControlSurface;
     public ControlInputType InputType;
     public float InputMultiplyer = 1;
-    
-    public float hp;
-    public float maxhp;
+
+    private DamageScript aeroDamage;
 
     private float flapAngle;
 
     public void Awake()
     {
-        hp = maxhp;
+        aeroDamage = GetComponent<DamageScript>();
     }
     public void SetFlapAngle(float angle)
     {
         flapAngle = Mathf.Clamp(angle, -Mathf.Deg2Rad * 50, Mathf.Deg2Rad * 50);
+    }
+
+    public float GetHp() //replace with interface...?
+    {
+        float hp;
+        if (aeroDamage != null) { hp = aeroDamage.GetHealthCurrent(); }
+        else { hp = 100; }
+        return hp;
     }
 
     public BiVector3 CalculateForces(Vector3 worldAirVelocity, float airDensity, Vector3 relativePosition)
@@ -71,11 +78,22 @@ public class AeroSurface : MonoBehaviour
         Vector3 lift = liftDirection * aerodynamicCoefficients.x * dynamicPressure * area;
         Vector3 drag = dragDirection * aerodynamicCoefficients.y * dynamicPressure * area;
         Vector3 torque = -transform.forward * aerodynamicCoefficients.z * dynamicPressure * area * config.chord;
-        //attempting to do damage stuff
+
+        float hp = 100;
+        float maxhp = 100;
+
+        //attempting to do damage stuff 
+        if (aeroDamage != null)
+        {
+            hp = aeroDamage.GetHealthCurrent();
+            maxhp = aeroDamage.GetHealthTotal();
+        }
+
         lift *= (hp / maxhp);
         if(hp > 0)
         {
-            drag /= (hp / maxhp);
+            float maxDragMult = 3f;
+            drag = drag + drag * ((maxhp-hp)/maxhp) * (maxDragMult-1);
         }
 
         forceAndTorque.p += lift + drag;
