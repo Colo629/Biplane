@@ -6,7 +6,7 @@ public class ExplosiveProjectile : BulletScript
 {
     public GameObject explosionObject;
     public float delayTime = 1f;
-    private float visVelocityY;
+    //private float visVelocityY;
     // Start is called before the first frame update
 
 
@@ -27,7 +27,7 @@ public class ExplosiveProjectile : BulletScript
         float deltaTime = Time.fixedDeltaTime;
         visualsTransform.localPosition = Vector3.zero;
         velocityY -= gravity * deltaTime;
-        visVelocityY = velocityY;
+        //visVelocityY = velocityY;
 
         Vector3 currentVelocity = new Vector3();
         Vector3 newPos = new Vector3();
