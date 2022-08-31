@@ -10,12 +10,16 @@ public class LandingScript : MonoBehaviour
     public Rigidbody rb;
     public bool startLand;
     public AirplaneController ac;
+    private Collider storedCollider;
+    public AirshipLandingChecker airshipLandingChecker;
     public float weightClamp;
+    private GameObject thisPlane;
 
     // Start is called before the first frame update
     void Start()
     {
         startingWeight = rb.mass;
+        thisPlane = rb.gameObject;
     }
 
     // Update is called once per frame
@@ -24,22 +28,26 @@ public class LandingScript : MonoBehaviour
         if(ac.thrustPercent > 0.9f)
         {
             startLand = false;
+            RemoveAirshipVariables();
             TakeOff();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
+        storedCollider = other;
         startLand = true;
+        SetAirshipVariables();
     }
     private void OnTriggerExit(Collider other)
     {
-        startLand = false;
+        
     }
     private void FixedUpdate()
     {
         if(startLand == true)
         {
             Landing();
+            airshipLandingChecker.StartRequipCount();
         }
     }
     void Landing()
@@ -51,6 +59,21 @@ public class LandingScript : MonoBehaviour
     {
         startLand = false;
         rb.mass = startingWeight;
+    }
+    void SetAirshipVariables()
+    {
+        airshipLandingChecker = storedCollider.GetComponent<AirshipLandingChecker>();
+        airshipLandingChecker.landedPlaneRB = rb;
+        airshipLandingChecker.landedPlane = thisPlane;
+    }
+    void RemoveAirshipVariables()
+    {
+        storedCollider = null;
+        startLand = false;
+        airshipLandingChecker = null;
+        airshipLandingChecker.landedPlaneRB = null;
+        airshipLandingChecker.landedPlane = null;
+        airshipLandingChecker.ResetRequip();
     }
 
 }

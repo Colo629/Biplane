@@ -5,9 +5,10 @@ using UnityEngine;
 public class RequipMover : MonoBehaviour
 {
     public Transform requipPosition;
-    public Transform plane;
     public AirshipLandingChecker landingChecker;
-    public float transitionSpeed;
+    private float journeyTime;
+    public float totalTransitionTime;
+    private bool parentSet;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +23,37 @@ public class RequipMover : MonoBehaviour
         {
             RequipMove();
         }
+        if(landingChecker.requip == false)
+        {
+            journeyTime = 0;
+            landingChecker.landedPlane.transform.parent = null;
+        }
     }
     void RequipMove()
     {
-        transitionSpeed *= Time.deltaTime;
-        plane.position = Vector3.Lerp(plane.position, requipPosition.position, transitionSpeed);
+        CalculateTravelPercent();
+        if (!parentSet)
+        {
+            SettingParent();
+        }
+        landingChecker.landedPlaneRB.isKinematic = true;
+        landingChecker.landedPlane.transform.position = Vector3.Lerp(landingChecker.landedPlane.transform.position, requipPosition.position, journeyTime);
+        landingChecker.landedPlane.transform.rotation = Quaternion.Lerp(landingChecker.landedPlane.transform.rotation, requipPosition.rotation, journeyTime);
+    }
+    void CalculateTravelPercent()
+    {
+        
+        journeyTime += Time.deltaTime;
+        if(journeyTime > totalTransitionTime)
+        {
+            journeyTime = totalTransitionTime;
+        }
+        //percentage of total distance
+        journeyTime /= totalTransitionTime;
+
+    }
+    void SettingParent()
+    {
+        landingChecker.landedPlane.transform.SetParent(requipPosition , true);
     }
 }

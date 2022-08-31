@@ -8,7 +8,11 @@ public class AirshipLandingChecker : MonoBehaviour
     public float requipTime = 3f;
     private float storedTime;
     public bool requip;
-    // Start is called before the first frame update
+    public Rigidbody landedPlaneRB = null;
+    public GameObject landedPlane;
+    private Collider storedCollider;
+   
+   
     void Start()
     {
         storedTime = requipTime;
@@ -22,23 +26,18 @@ public class AirshipLandingChecker : MonoBehaviour
             StartRequipCount();
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        storedTime = requipTime;
-        landed = true;
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        storedTime = requipTime;
-        requip = false;
-        landed = false;
-    }
-    void StartRequipCount()
+ 
+   public void StartRequipCount()
     {
         storedTime -= Time.deltaTime;
         if(storedTime <= 0)
         {
             requip = true;
         }
+    }
+    public void ResetRequip()
+    {
+        storedTime = requipTime;
+        requip = false;
     }
 }
