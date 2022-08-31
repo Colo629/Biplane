@@ -19,7 +19,7 @@ public class MonitorMine : DamageScript
         MineLoop();
     }
 
-    protected override void StartDamageable()
+    protected override void DamageableStart()
     {
         
     }

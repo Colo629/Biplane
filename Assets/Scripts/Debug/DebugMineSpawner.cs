@@ -16,11 +16,12 @@ public class DebugMineSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (Time.time > spawnTime)
+        while (Time.time > spawnTime & minesToSpawn > 0)
         {
             spawnTime += spawnDelay;
             if (minesToSpawn > 0)
             {
+                Debug.Log(name);
                 minesToSpawn -= 1;
                 Vector3 randPos = new Vector3(Random.Range(-1500, 1500), Random.Range(130, 400), Random.Range(-1500, 1500));
                 Instantiate(monitorMine, randPos, Quaternion.identity, null);
