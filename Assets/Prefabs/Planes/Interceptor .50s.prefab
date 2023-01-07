@@ -144,6 +144,7 @@ MonoBehaviour:
   rb: {fileID: 1961706717615765879}
   startLand: 0
   ac: {fileID: 1961706717615765877}
+  airshipLandingChecker: {fileID: 0}
   weightClamp: 0
 --- !u!1 &1128416067742802476
 GameObject:
@@ -1624,8 +1625,6 @@ MonoBehaviour:
   IsControlSurface: 0
   InputType: 0
   InputMultiplyer: 1
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798573145394535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1651,9 +1650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -1684,7 +1682,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706716816497736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,8 +1733,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 3
   InputMultiplyer: 0
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798573111083685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1763,9 +1758,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -1796,7 +1790,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706716878407697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,8 +1841,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 3
   InputMultiplyer: 1
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798573038687994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1875,9 +1866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -1908,7 +1898,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706717014080004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,8 +1948,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 2
   InputMultiplyer: -3
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798572905915153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1986,9 +1973,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -2019,7 +2005,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706717116194917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,8 +2055,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 0
   InputMultiplyer: 1.3
-  hp: 0
-  maxhp: 100
 --- !u!114 &6040798572869598897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,9 +2067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -2117,7 +2099,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!65 &979243421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2276,8 +2257,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 0
   InputMultiplyer: 1.3
-  hp: 0
-  maxhp: 100
 --- !u!114 &6040798572509725813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2290,9 +2269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -2323,7 +2301,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!65 &979243420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2630,8 +2607,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 3
   InputMultiplyer: 1
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798572246727491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2657,9 +2632,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -2690,7 +2664,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706717717228857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,8 +2715,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 2
   InputMultiplyer: 3
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798572266992594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2769,9 +2740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -2802,7 +2772,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706717870323388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,8 +3045,6 @@ MonoBehaviour:
   IsControlSurface: 0
   InputType: 0
   InputMultiplyer: 1
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798571862667788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3103,9 +3070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -3136,7 +3102,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706718136713181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3187,8 +3152,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 1
   InputMultiplyer: -1.3
-  hp: 0
-  maxhp: 100
 --- !u!114 &6040798571746844985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3201,9 +3164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -3234,7 +3196,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!65 &979243419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3429,8 +3390,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 3
   InputMultiplyer: 1
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798571544676107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3456,9 +3415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -3489,7 +3447,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706718524561370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3540,8 +3497,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 3
   InputMultiplyer: 0
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798571459381555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3567,9 +3522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -3600,7 +3554,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706718612451580
 GameObject:
   m_ObjectHideFlags: 0
@@ -3652,8 +3605,6 @@ MonoBehaviour:
   IsControlSurface: 1
   InputType: 3
   InputMultiplyer: 1
-  hp: 0
-  maxhp: 100
 --- !u!65 &6040798571278970393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3679,9 +3630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e02c1757253f3498086448ee5b7939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aeroS: {fileID: 0}
+  hpTotal: 100
   disabled: 0
-  test: 0
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -3712,7 +3662,6 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   storedColor: {r: 0, g: 0, b: 0, a: 0}
-  ignoreGradient: 0
 --- !u!1 &1961706718652979313
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,7 +4873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reference: {fileID: 3785353746610968232}
   hand: {fileID: 0}
-  handParent: {fileID: 0}
+  handParent: {fileID: 5897016185493407643}
   grabbed: 0
   grabObject:
     actionPath: /actions/default/in/GrabGrip
@@ -4934,9 +4883,6 @@ MonoBehaviour:
   mirror: 0
   armTriggerR: 0
   armTriggerL: 0
-  runOnce: 0
-  outputX: 0
-  outputY: 0
 --- !u!54 &3785353747148336163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6050,7 +5996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reference: {fileID: 8687427921186378847}
   hand: {fileID: 0}
-  handParent: {fileID: 0}
+  handParent: {fileID: 5897016185493638589}
   grabbed: 0
   grabObject:
     actionPath: /actions/default/in/GrabGrip
@@ -6060,9 +6006,6 @@ MonoBehaviour:
   mirror: 1
   armTriggerR: 0
   armTriggerL: 0
-  runOnce: 0
-  outputX: 0
-  outputY: 0
 --- !u!54 &8687427921722699476
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6249,7 +6192,7 @@ PrefabInstance:
     - target: {fileID: 4064237474607787138, guid: 51a4700ab6b1c354e9b0a7c42610324a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 4064237474607787138, guid: 51a4700ab6b1c354e9b0a7c42610324a,
         type: 3}
@@ -6259,7 +6202,7 @@ PrefabInstance:
     - target: {fileID: 4064237474607787138, guid: 51a4700ab6b1c354e9b0a7c42610324a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4064237474607787138, guid: 51a4700ab6b1c354e9b0a7c42610324a,
         type: 3}
@@ -6298,15 +6241,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a4700ab6b1c354e9b0a7c42610324a, type: 3}
+--- !u!4 &5897016185493669139 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4064237474607787138, guid: 51a4700ab6b1c354e9b0a7c42610324a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7616003174625159569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5897016185493638589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4064237474607817772, guid: 51a4700ab6b1c354e9b0a7c42610324a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7616003174625159569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7132725797178679708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 814574131828623373, guid: 51a4700ab6b1c354e9b0a7c42610324a,
     type: 3}
   m_PrefabInstance: {fileID: 7616003174625159569}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5897016185493669139 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4064237474607787138, guid: 51a4700ab6b1c354e9b0a7c42610324a,
+--- !u!1 &5897016185493407643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4064237474608049674, guid: 51a4700ab6b1c354e9b0a7c42610324a,
     type: 3}
   m_PrefabInstance: {fileID: 7616003174625159569}
   m_PrefabAsset: {fileID: 0}
