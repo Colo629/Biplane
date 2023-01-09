@@ -121,11 +121,11 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Vector2 rightRotatePress
+        public virtual SteamVR_Action_Vector2 leftRotatePress
         {
             get
             {
-                return SteamVR_Actions.default_rightRotatePress;
+                return SteamVR_Actions.default_leftRotatePress;
             }
         }
         

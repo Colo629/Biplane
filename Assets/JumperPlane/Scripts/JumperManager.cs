@@ -11,6 +11,7 @@ public class JumperManager : MonoBehaviour
     public GameObject aeroDynamics;
     public bool wingsDestroyed;
     public float wingSweepTime;
+    public bool gimball;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +41,13 @@ public class JumperManager : MonoBehaviour
         if(wingSwept == false)
         {
             wingSwept = true;
+            gimball = true;
             return;
         }
         if (wingSwept == true)
         {
             wingSwept = false;
+            gimball = false;
             return;
         }
 
@@ -63,6 +66,7 @@ public class JumperManager : MonoBehaviour
     public void DestroyWings()
     {
         aeroDynamics.SetActive(false);
+        gimball = false;
         wingsDestroyed = true;
     }
     public void Jump()

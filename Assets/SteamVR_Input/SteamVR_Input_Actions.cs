@@ -43,7 +43,7 @@ namespace Valve.VR
         
         private static SteamVR_Action_Single p_default_leftTrigger;
         
-        private static SteamVR_Action_Vector2 p_default_rightRotatePress;
+        private static SteamVR_Action_Vector2 p_default_leftRotatePress;
         
         private static SteamVR_Action_Boolean p_default_HeadResetButton;
         
@@ -173,11 +173,11 @@ namespace Valve.VR
             }
         }
         
-        public static SteamVR_Action_Vector2 default_rightRotatePress
+        public static SteamVR_Action_Vector2 default_leftRotatePress
         {
             get
             {
-                return SteamVR_Actions.p_default_rightRotatePress.GetCopy<SteamVR_Action_Vector2>();
+                return SteamVR_Actions.p_default_leftRotatePress.GetCopy<SteamVR_Action_Vector2>();
             }
         }
         
@@ -293,7 +293,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_rightTrigger,
                     SteamVR_Actions.default_leftTrigger,
-                    SteamVR_Actions.default_rightRotatePress,
+                    SteamVR_Actions.default_leftRotatePress,
                     SteamVR_Actions.default_HeadResetButton,
                     SteamVR_Actions.default_SweepWing,
                     SteamVR_Actions.default_locktarget,
@@ -320,7 +320,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_rightTrigger,
                     SteamVR_Actions.default_leftTrigger,
-                    SteamVR_Actions.default_rightRotatePress,
+                    SteamVR_Actions.default_leftRotatePress,
                     SteamVR_Actions.default_HeadResetButton,
                     SteamVR_Actions.default_SweepWing,
                     SteamVR_Actions.default_locktarget,
@@ -360,7 +360,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_leftTrigger,
                     SteamVR_Actions.buggy_Throttle};
             Valve.VR.SteamVR_Input.actionsVector2 = new Valve.VR.SteamVR_Action_Vector2[] {
-                    SteamVR_Actions.default_rightRotatePress,
+                    SteamVR_Actions.default_leftRotatePress,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.buggy_Steering};
             Valve.VR.SteamVR_Input.actionsVector3 = new Valve.VR.SteamVR_Action_Vector3[0];
@@ -378,7 +378,7 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_rightTrigger,
                     SteamVR_Actions.default_leftTrigger,
-                    SteamVR_Actions.default_rightRotatePress,
+                    SteamVR_Actions.default_leftRotatePress,
                     SteamVR_Actions.default_HeadResetButton,
                     SteamVR_Actions.default_SweepWing,
                     SteamVR_Actions.default_locktarget,
@@ -406,7 +406,7 @@ namespace Valve.VR
             SteamVR_Actions.p_default_SnapTurnRight = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/SnapTurnRight")));
             SteamVR_Actions.p_default_rightTrigger = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/default/in/rightTrigger")));
             SteamVR_Actions.p_default_leftTrigger = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/default/in/leftTrigger")));
-            SteamVR_Actions.p_default_rightRotatePress = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/default/in/rightRotatePress")));
+            SteamVR_Actions.p_default_leftRotatePress = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/default/in/leftRotatePress")));
             SteamVR_Actions.p_default_HeadResetButton = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/HeadResetButton")));
             SteamVR_Actions.p_default_SweepWing = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/SweepWing")));
             SteamVR_Actions.p_default_locktarget = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/locktarget")));

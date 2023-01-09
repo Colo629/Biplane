@@ -47,7 +47,7 @@ public class DebugPanel : MonoBehaviour
         throttle = cockpitManager.leftPull;
         roll = cockpitManager.rightRotate;
         pitch = cockpitManager.rightPull;
-        yaw = cockpitManager.rightRotatePress.axis.x;
+        yaw = cockpitManager.leftRotatePress.axis.x;
 
         
         airspeedText.text = airspeed.ToString().Substring(0, Mathf.Clamp(4, 0, airspeed.ToString().Length)).Trim()+"m/s";

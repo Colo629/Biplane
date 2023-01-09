@@ -16,7 +16,7 @@ public class CockpitManager : MonoBehaviour
     public bool rightGrabbed;
     public AirplaneController ac;
     public SteamVR_Action_Single rightTrigger;
-    public SteamVR_Action_Vector2 rightRotatePress;
+    public SteamVR_Action_Vector2 leftRotatePress = null;
     public bool engineOn;
 
     private void Awake()
@@ -44,13 +44,14 @@ public class CockpitManager : MonoBehaviour
     }
     void FilterLeftData()
     {
-        float rotate;
+       /* float rotate;
         rotate = (lls.output.x + 0.15f) * (100f / 65f);
         leftRotate = Mathf.Clamp(rotate, 0, 1f);
         leftRotate -= 0.5f;
-        leftRotate *= 2f;
+        leftRotate *= 2f;*/
         float pull = lls.output.z * 4f;
         leftPull = Mathf.Clamp(pull, 0, 1);
+        leftRotate = leftRotatePress.axis.x;
 
 
     }
@@ -96,7 +97,7 @@ public class CockpitManager : MonoBehaviour
         ac.Pitch = (Mathf.Abs(rightPull - 1f) - 0.5f) * 2;
         ac.Roll = rightRotate;
         // ac.Yaw = leftRotate;
-        ac.Yaw = rightRotatePress.axis.x;
+        ac.Yaw = leftRotatePress.axis.x;
         
         
     }

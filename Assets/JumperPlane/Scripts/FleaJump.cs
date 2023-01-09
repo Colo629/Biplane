@@ -5,7 +5,6 @@ using UnityEngine;
 public class FleaJump : MonoBehaviour
 {
     public AircraftPhysics aircraftPhysics;
-    public bool sweepWing;
     Rigidbody planeRigidBody;
     public float jumpThrust;
     public float maxJumpThrust;
@@ -33,8 +32,5 @@ public class FleaJump : MonoBehaviour
         CalculateJumpThrust();
         planeRigidBody.AddForce((new Vector3(0, 0, jumpThrust)), ForceMode.Impulse);
     }
-    public void JumpCooldown()
-    {
-
-    }
+  
 }
