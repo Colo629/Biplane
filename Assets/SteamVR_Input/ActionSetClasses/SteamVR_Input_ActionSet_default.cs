@@ -137,6 +137,30 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean SweepWing
+        {
+            get
+            {
+                return SteamVR_Actions.default_SweepWing;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean locktarget
+        {
+            get
+            {
+                return SteamVR_Actions.default_locktarget;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean weaponmode
+        {
+            get
+            {
+                return SteamVR_Actions.default_weaponmode;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get
