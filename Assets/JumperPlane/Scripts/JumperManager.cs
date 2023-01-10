@@ -69,13 +69,7 @@ public class JumperManager : MonoBehaviour
         gimball = false;
         wingsDestroyed = true;
     }
-    public void Jump()
-    {
-
-    }
-    public void JumpCooldown()
-    {
-
-    }
+   
+    
     
 }

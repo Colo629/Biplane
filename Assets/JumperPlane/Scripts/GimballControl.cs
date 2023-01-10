@@ -50,7 +50,6 @@ public class GimballControl : MonoBehaviour
         rightPull *= 2f;
         Vector3 cockpitCommand = new Vector3((rightPull * -1) * pitchSens, cockpitManager.leftRotate * yawSens, cockpitManager.rightRotate * rollSens);
         filteredRotationValues =  cockpitCommand * Time.deltaTime;
-        // = new Vector3((jumperShip.localEulerAngles.x + ((rightPull * -1) * pitchSens)), (jumperShip.localEulerAngles.y + (cockpitManager.leftRotate * yawSens)), (jumperShip.localEulerAngles.z + (cockpitManager.rightRotate * rollSens)));
     }
 
 }
