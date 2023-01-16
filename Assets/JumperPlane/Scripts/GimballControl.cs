@@ -37,7 +37,7 @@ public class GimballControl : MonoBehaviour
     }
     public void GimballMovement()
     {
-        FilterValues();
+       FilterValues();
        transform.RotateAround(transform.position, transform.up , filteredRotationValues.y);
        transform.RotateAround(transform.position, transform.forward, filteredRotationValues.z);
        transform.RotateAround(transform.position, transform.right, filteredRotationValues.x);
