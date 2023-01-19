@@ -6,6 +6,7 @@ public class MissileManager : MonoBehaviour
 {
     public GameObject target;
     public bool fireMissile;
+    public bool thrust;
     // Start is called before the first frame update
     void Start()
     {
