@@ -20,8 +20,9 @@ public class MissileVector : MonoBehaviour
     public float angularClamp = 1f;
     private Vector3 transformedAngle;
     public float drag = 0.02f;
-    public bool burn;
     public float burnTime;
+    public float angleDifference;
+    public float turnAggression = 1;
     
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,7 @@ public class MissileVector : MonoBehaviour
         }
         if(fired == true)
         {
-            if(missileManager.thrust == true)
+            if(missileManager.thrust == true & burnTime > 0)    
             {
                 Thrust();
             }
@@ -55,7 +56,9 @@ public class MissileVector : MonoBehaviour
     {
         
         transformedAngle = transform.InverseTransformDirection(angularVelocity);
-        Vector3 filteredAngle = Vector3.ClampMagnitude(transformedAngle, angularClamp) * Time.fixedDeltaTime * missileSens;
+        //  angleDifference = Vector3.SignedAngle(targetDirection, transform.forward, Vector3.up);
+        angleDifference = Vector3.Angle(angularVelocity, transform.forward);
+        Vector3 filteredAngle = Vector3.ClampMagnitude(transformedAngle, angularClamp) * Time.fixedDeltaTime * missileSens * Mathf.Abs(angleDifference * angleDifference);
         transform.RotateAround(transform.position , Vector3.up, filteredAngle.x);
         transform.RotateAround(transform.position , transform.right, -filteredAngle.y);
         transform.RotateAround(transform.position , transform.forward , -transform.localEulerAngles.z);
@@ -85,8 +88,12 @@ public class MissileVector : MonoBehaviour
     public void Thrust()
     {
         missileRB.AddRelativeForce(Vector3.forward * thrustForce);
-        missileRB.AddRelativeForce(Vector3.back * drag * missileRB.velocity.magnitude);
+        burnTime -= Time.fixedDeltaTime;
+    }
+    public void Drag()
+    {
+    //using built in drag on the rigidbody for now
     }
 
- 
+
 }

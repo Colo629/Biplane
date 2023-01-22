@@ -28,7 +28,7 @@ public class FakeAero : MonoBehaviour
     }
     void ScuffedAero()
     {
-        aeroVelocity = Vector3.Slerp(transform.InverseTransformDirection(rigidBody.velocity), transform.forward * rigidBody.velocity.magnitude, aeroStrength * Time.fixedDeltaTime);
+        aeroVelocity = Vector3.Slerp(transform.InverseTransformDirection(rigidBody.velocity), Vector3.forward * rigidBody.velocity.magnitude, aeroStrength * Time.fixedDeltaTime);
         // rigidBody.velocity = transform.TransformDirection(aeroVelocity);
         rigidBody.velocity = transform.TransformDirection(aeroVelocity);
     }
