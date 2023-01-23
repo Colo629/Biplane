@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7843457635271306380}
   - component: {fileID: 7843457635271306377}
   - component: {fileID: 7843457635271306381}
+  - component: {fileID: 1288971409}
   m_Layer: 0
   m_Name: Fox2
   m_TagString: Untagged
@@ -27,15 +28,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7843457635271306383}
-  m_LocalRotation: {x: -0.016025204, y: 0.86667734, z: 0.00432047, w: 0.49859294}
-  m_LocalPosition: {x: -1880.4287, y: -11.604647, z: -142.91638}
+  m_LocalRotation: {x: -0.0071274745, y: 0.9244593, z: 0.009322963, w: 0.38110012}
+  m_LocalPosition: {x: -1850.01, y: -52.9, z: -152.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7843457635536697138}
   - {fileID: 7843457635682188122}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.345, y: 120.193, z: -1.345}
+  m_LocalEulerAnglesHint: {x: -1.299, y: 135.197, z: -0.348}
 --- !u!54 &7843457635271306378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47,8 +48,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0.02
   m_AngularDrag: 0
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -66,7 +67,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   fireMissile: 0
-  thrust: 1
+  thrust: 0
+  delayTime: 0.2
+  maximumAngle: 45
+  detonator: {fileID: 0}
+  spool: 0
+  delayCheck: 2
 --- !u!114 &7843457635271306377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,12 +87,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missileManager: {fileID: 7843457635271306380}
   thrustForce: 100
-  missileSens: 0.0005
+  missileSens: 0.0003
   angularClamp: 30
   drag: 0.6
   burnTime: 4
   angleDifference: 0
-  turnAggression: 5
+  planeRB: {fileID: 0}
+  fuzeRange: 7
 --- !u!114 &7843457635271306381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +107,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aeroStrength: 0.95
+--- !u!114 &1288971409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843457635271306383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc382b37172e0b4eaf57ddcaefea471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticles: {fileID: 1689342178581339086, guid: 9cfa6bc3572fedd4ba2dbace254aa8de,
+    type: 3}
+  explosionScripts: {fileID: 5824185584706394371, guid: ffc5d5a079891b74484d7fb7ae4253f5,
+    type: 3}
 --- !u!1 &7843457635277962773
 GameObject:
   m_ObjectHideFlags: 0

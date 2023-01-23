@@ -12,6 +12,9 @@ public class JumperManager : MonoBehaviour
     public bool wingsDestroyed;
     public float wingSweepTime;
     public bool gimball;
+    public SteamVR_Action_Boolean fireMissile;
+    public GameObject[] fox2s;
+    public GameObject testMissile; //only for testing not for final version
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,10 @@ public class JumperManager : MonoBehaviour
             SweepWings();
         }
         //Aero = aerodynamics
+        if(fireMissile.GetStateDown(SteamVR_Input_Sources.Any) == true)
+        {
+            testMissile.GetComponent<MissileManager>().fireMissile = true;
+        }
         ManageAero();
     }
 
@@ -68,6 +75,10 @@ public class JumperManager : MonoBehaviour
         aeroDynamics.SetActive(false);
         gimball = false;
         wingsDestroyed = true;
+    }
+    public void SelectedMissile()
+    {
+
     }
    
     

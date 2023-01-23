@@ -13,7 +13,6 @@ public class Explosion : MonoBehaviour
     {
         thisCollider = gameObject.GetComponent<SphereCollider>();
         thisCollider.radius = explosionRadius;
-        Debug.Log("Spooled");
     }
 
     // Update is called once per frame

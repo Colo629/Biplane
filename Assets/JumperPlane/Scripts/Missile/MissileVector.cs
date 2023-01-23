@@ -22,12 +22,16 @@ public class MissileVector : MonoBehaviour
     public float drag = 0.02f;
     public float burnTime;
     public float angleDifference;
-    public float turnAggression = 1;
+    public Rigidbody planeRB;
+    private Detonator detonator;
+    public float fuzeRange;
     
     // Start is called before the first frame update
     void Start()
     {
+        detonator = gameObject.GetComponent<Detonator>();
         targetRB = missileManager.target.GetComponent<Rigidbody>();
+        //planeRB = GetComponentInParent<Rigidbody>();
         targetTransform = missileManager.target.transform;
         missileRB = gameObject.GetComponent<Rigidbody>();
         
@@ -36,19 +40,25 @@ public class MissileVector : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(missileRB.velocity.magnitude);
-        if (missileManager.fireMissile == true)
+        if (missileManager.fireMissile == true & !fired)
         {
+            missileRB.velocity = planeRB.velocity;
             fired = true;
         }
         if(fired == true)
         {
+            if(missileRB.isKinematic == true)
+            {
+                missileRB.isKinematic = false;
+            }
+            
             if(missileManager.thrust == true & burnTime > 0)    
             {
                 Thrust();
             }
             GetAngularVelocity();
             AngleMissile();
+            DistanceFuze();
         }
         
     }
@@ -93,6 +103,13 @@ public class MissileVector : MonoBehaviour
     public void Drag()
     {
     //using built in drag on the rigidbody for now
+    }
+    public void DistanceFuze()
+    {
+        if(targetDirection.magnitude < fuzeRange)
+        {
+            detonator.Detonate();
+        }
     }
 
 
