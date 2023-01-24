@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class HardpointManager : MonoBehaviour
 {
-    public GameObject trackedTarget;
+    public Tracker tracker;
     [SerializeField]
     List<Hardpoint> hardPoints = null;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        tracker = gameObject.GetComponent<Tracker>();
     }
 
     // Update is called once per frame
@@ -21,14 +21,17 @@ public class HardpointManager : MonoBehaviour
     }
    public void FireLoadedHardpoint()
     {
-        foreach(Hardpoint hardpoint in hardPoints)
+        if(tracker.trackedTarget != null)
         {
-            if (hardpoint.payloadDropped == false)
+            foreach (Hardpoint hardpoint in hardPoints)
             {
-                hardpoint.LaunchPayload(trackedTarget);
-                break;
+                if (hardpoint.payloadDropped == false)
+                {
+                    hardpoint.LaunchPayload(tracker.trackedTarget);
+                    break;
+                }
+                else continue;
             }
-            else continue;
         }
     }
 }
