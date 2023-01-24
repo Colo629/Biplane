@@ -13,12 +13,11 @@ public class JumperManager : MonoBehaviour
     public float wingSweepTime;
     public bool gimball;
     public SteamVR_Action_Boolean fireMissile;
-    public GameObject[] fox2s;
-    public GameObject testMissile; //only for testing not for final version
-    // Start is called before the first frame update
+    private HardpointManager hardpointManager;
+    // Start is called before the first frame update  
     void Start()
     {
-        
+        hardpointManager = gameObject.GetComponent<HardpointManager>();
     }
 
     // Update is called once per frame
@@ -31,7 +30,7 @@ public class JumperManager : MonoBehaviour
         //Aero = aerodynamics
         if(fireMissile.GetStateDown(SteamVR_Input_Sources.Any) == true)
         {
-            testMissile.GetComponent<MissileManager>().fireMissile = true;
+            hardpointManager.FireLoadedHardpoint();
         }
         ManageAero();
     }

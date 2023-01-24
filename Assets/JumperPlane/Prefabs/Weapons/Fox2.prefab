@@ -69,7 +69,7 @@ MonoBehaviour:
   fireMissile: 0
   thrust: 0
   delayTime: 0.2
-  maximumAngle: 45
+  maximumAngle: 60
   detonator: {fileID: 0}
   spool: 0
   delayCheck: 2
@@ -87,13 +87,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missileManager: {fileID: 7843457635271306380}
   thrustForce: 100
-  missileSens: 0.0003
-  angularClamp: 30
+  missileSens: 0.00012
+  angularClamp: 60
   drag: 0.6
   burnTime: 4
   angleDifference: 0
   planeRB: {fileID: 0}
-  fuzeRange: 7
+  fuzeRange: 3
 --- !u!114 &7843457635271306381
 MonoBehaviour:
   m_ObjectHideFlags: 0

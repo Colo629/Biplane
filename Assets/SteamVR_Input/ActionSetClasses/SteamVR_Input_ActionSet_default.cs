@@ -177,6 +177,22 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean trackTarget
+        {
+            get
+            {
+                return SteamVR_Actions.default_trackTarget;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean forgetTarget
+        {
+            get
+            {
+                return SteamVR_Actions.default_forgetTarget;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

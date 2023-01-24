@@ -20,8 +20,8 @@ public class Detonator : MonoBehaviour
     }
     public void Detonate()
     {
-        Instantiate(explosionScripts, transform.position, Quaternion.identity);
-        Instantiate(explosionParticles, transform.position, Quaternion.identity);
+        Instantiate(explosionScripts, transform.position, transform.rotation);
+        Instantiate(explosionParticles, transform.position, transform.rotation);
         // ^^^ keep seperate of instantiate doesn't work
         Destroy(gameObject);
     }
