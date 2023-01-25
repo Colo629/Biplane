@@ -12,6 +12,7 @@ public class Tracker : MonoBehaviour
     public float beamRadius;
     string[] collidableLayers = { "trackable", "obstacle" };
     private int layersToCheck;
+    public SteamVR_Action_Single trackTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,11 @@ public class Tracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lockTarget.GetStateDown(SteamVR_Input_Sources.Any) == true)
+        /*if (lockTarget.GetStateDown(SteamVR_Input_Sources.Any) == true)
+        {
+            LockTarget();
+        }*/
+        if (trackTrigger.axis > 0.7f)
         {
             LockTarget();
         }
@@ -30,15 +35,19 @@ public class Tracker : MonoBehaviour
     {
         RaycastHit hit;
         Ray lookRay = new Ray(playerHead.position , playerHead.forward);
-        if(Physics.SphereCast(lookRay, beamRadius, out hit , beamRange , layersToCheck))
+        if (Physics.SphereCast(lookRay, beamRadius, out hit, beamRange, layersToCheck))
         {
-            Debug.Log("tracked");
-            if(hit.collider.gameObject.tag == "trackable")
+            if (hit.collider.gameObject.tag == "trackable")
             {
                 trackedTarget = hit.collider.gameObject;
             }
             return;
         }
+        else ForgetTarget();
+    }
+    void ForgetTarget()
+    {
+        trackedTarget = null;
     }
 
 }

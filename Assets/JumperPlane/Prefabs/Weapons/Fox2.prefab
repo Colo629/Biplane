@@ -28,15 +28,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7843457635271306383}
-  m_LocalRotation: {x: -0.0071274745, y: 0.9244593, z: 0.009322963, w: 0.38110012}
-  m_LocalPosition: {x: -1850.01, y: -52.9, z: -152.21}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7843457635536697138}
   - {fileID: 7843457635682188122}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.299, y: 135.197, z: -0.348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7843457635271306378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   fireMissile: 0
   thrust: 0
   delayTime: 0.2
-  maximumAngle: 60
+  maximumAngle: 85
   detonator: {fileID: 0}
   spool: 0
   delayCheck: 2
@@ -86,11 +86,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missileManager: {fileID: 7843457635271306380}
-  thrustForce: 100
+  thrustForce: 75
   missileSens: 0.00012
   angularClamp: 60
   drag: 0.6
-  burnTime: 4
+  burnTime: 8
   angleDifference: 0
   planeRB: {fileID: 0}
   fuzeRange: 3
@@ -122,6 +122,8 @@ MonoBehaviour:
   explosionParticles: {fileID: 1689342178581339086, guid: 9cfa6bc3572fedd4ba2dbace254aa8de,
     type: 3}
   explosionScripts: {fileID: 5824185584706394371, guid: ffc5d5a079891b74484d7fb7ae4253f5,
+    type: 3}
+  selfDestructParticles: {fileID: 8707085517216110543, guid: 11964db7d16ba8b4b83b71208b174a29,
     type: 3}
 --- !u!1 &7843457635277962773
 GameObject:

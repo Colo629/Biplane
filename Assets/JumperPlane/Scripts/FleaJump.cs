@@ -15,6 +15,7 @@ public class FleaJump : MonoBehaviour
     private bool coolingDown;
     public float cooldownTime = 40f;
     public float jumpDelay = 0.5f;
+    public SteamVR_Action_Boolean jumpButton;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,11 @@ public class FleaJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(jumpTrigger.axis > 0.7f & coolingDown == false)
+        /*if(jumpTrigger.axis > 0.7f & coolingDown == false)
+        {
+            Jump();
+        }*/
+        if (jumpButton.GetStateDown(SteamVR_Input_Sources.Any) == true & coolingDown == false)
         {
             Jump();
         }

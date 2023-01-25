@@ -7,6 +7,7 @@ public class Hardpoint : MonoBehaviour
     public GameObject payload;
     private GameObject firedObject;
     public bool payloadDropped;
+    public MeshRenderer hudMarker;
 
     // Start is called before the first frame update
     void Start()

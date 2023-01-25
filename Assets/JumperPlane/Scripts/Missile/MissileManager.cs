@@ -49,7 +49,7 @@ public class MissileManager : MonoBehaviour
         checkedAngle = Vector3.Angle(target.transform.position - transform.position , transform.forward);
         if(Mathf.Abs(checkedAngle) > maximumAngle)
         {
-            detonator.Detonate();
+            detonator.SelfDestruct();
         }
     }
     IEnumerator DelayLaunch()

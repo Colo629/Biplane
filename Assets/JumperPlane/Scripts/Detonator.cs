@@ -7,6 +7,7 @@ public class Detonator : MonoBehaviour
     //public GameObject explosionObject;
     public ParticleSystem explosionParticles;
     public GameObject explosionScripts;
+    public ParticleSystem selfDestructParticles;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,11 @@ public class Detonator : MonoBehaviour
         Instantiate(explosionParticles, transform.position, transform.rotation);
         // ^^^ keep seperate of instantiate doesn't work
         Destroy(gameObject);
+    }
+    public void SelfDestruct()
+    {
+        Instantiate(selfDestructParticles, transform.position, transform.rotation);
+        Destroy(gameObject);
+
     }
 }
