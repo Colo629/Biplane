@@ -16,11 +16,12 @@ public class FleaJump : MonoBehaviour
     public float cooldownTime = 40f;
     public float jumpDelay = 0.5f;
     public SteamVR_Action_Boolean jumpButton;
+    private Hud hud;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hud = gameObject.GetComponent<Hud>();
     }
 
     // Update is called once per frame
@@ -56,10 +57,13 @@ public class FleaJump : MonoBehaviour
     }
 
     IEnumerator JumpCooldown()
-    {           
+    {
+        
         coolingDown = true;
+        hud.SetBoostHud(coolingDown);
         yield return new WaitForSeconds(cooldownTime);
         coolingDown = false;
+        hud.SetBoostHud(coolingDown);
     }
     IEnumerator JumpStart()
     {
