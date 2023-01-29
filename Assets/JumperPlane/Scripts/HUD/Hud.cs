@@ -12,8 +12,8 @@ public class Hud : MonoBehaviour
     public Material boostCD;
     private Tracker tracker;
     public GameObject trackerHudMarker;
-    public Transform trackerHudGraphics;
     private bool trackerHudOff;
+    public Transform playerCamera;
 
 
 
@@ -42,6 +42,7 @@ public class Hud : MonoBehaviour
         trackerHudMarker.SetActive(true);
        // Vector3 direction = transform.position - tracker.trackedTarget.transform.position;
         trackerHudMarker.transform.LookAt(tracker.trackedTarget.transform.position);
+        CenterTrackerMarker();
     }
     public void SetBoostHud(bool cooldown)
     {
@@ -51,5 +52,10 @@ public class Hud : MonoBehaviour
         }
         else
             boostHudMarker.material = boostReady;
+    }
+    void CenterTrackerMarker()
+    {
+        // trackerHudMarker.transform.position = Camera.main.transform.position; gets a null referencea fter one loop hacking in instead of debugging
+        trackerHudMarker.transform.position =playerCamera.position;
     }
 }
