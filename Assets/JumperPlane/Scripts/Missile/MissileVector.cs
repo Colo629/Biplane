@@ -69,7 +69,7 @@ public class MissileVector : MonoBehaviour
         //  angleDifference = Vector3.SignedAngle(targetDirection, transform.forward, Vector3.up);
         angleDifference = Vector3.Angle(angularVelocity, transform.forward);
         Vector3 filteredAngle = Vector3.ClampMagnitude(transformedAngle, angularClamp) * Time.fixedDeltaTime * missileSens * Mathf.Abs(angleDifference * angleDifference);
-        transform.RotateAround(transform.position , Vector3.up, filteredAngle.x);
+        transform.RotateAround(transform.position , transform.up, filteredAngle.x);
         transform.RotateAround(transform.position , transform.right, -filteredAngle.y);
         transform.RotateAround(transform.position , transform.forward , -transform.localEulerAngles.z);
     }

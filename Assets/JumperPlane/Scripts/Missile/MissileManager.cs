@@ -15,12 +15,14 @@ public class MissileManager : MonoBehaviour
     public float delayCheck = 2;
     private Rigidbody thisRigidbody;
     private JumperManager jumperManager;
+    private MissileVector missileVector;
     // Start is called before the first frame update
     void Start()
     {
         detonator = gameObject.GetComponent<Detonator>();
         thisRigidbody = gameObject.GetComponent<Rigidbody>();
         jumperManager = GetComponentInParent<JumperManager>();
+        missileVector = GetComponent<MissileVector>();
     }
 
     // Update is called once per frame
@@ -49,6 +51,11 @@ public class MissileManager : MonoBehaviour
         checkedAngle = Vector3.Angle(target.transform.position - transform.position , transform.forward);
         if(Mathf.Abs(checkedAngle) > maximumAngle)
         {
+            if(Vector3.Distance(target.transform.position , transform.position) < missileVector.fuzeRange * 1.5)
+            {
+                detonator.Detonate();
+            }
+            else
             detonator.SelfDestruct();
         }
     }

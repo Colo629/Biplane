@@ -22,6 +22,9 @@ public class leverScript : MonoBehaviour
     public bool runOnce;
     public float outputX;
     public float outputY;
+    public float timeToZero = 5;
+    private float timeLeft;
+
     
     
     //6
@@ -44,7 +47,7 @@ public class leverScript : MonoBehaviour
 
     void Start()
     {
-        
+        timeLeft = 0;
     }
 
     // Update is called once per frame
@@ -59,9 +62,14 @@ public class leverScript : MonoBehaviour
             hand = null;
             runOnce = false;
         }
+        if(!grabbed & !mirror)
+        {
+            ZeroLever();
+        }
         if(grabbed)
         {
-            if(!mirror)
+            timeLeft = 0;
+            if (!mirror)
             {
             //rotate reference?
                 armTriggerR = true;
@@ -108,9 +116,19 @@ public class leverScript : MonoBehaviour
 
         }
             transform.position = reference.transform.TransformPoint(new Vector3(0, 0, output.z)); ; //moves the aesthetics?
-        
-        
-        // transform.localEulerAngles = new Vector3(output.x,transform.localEulerAngles.y,transform.localEulerAngles.z) ;
+                                // transform.localEulerAngles = new Vector3(output.x,transform.localEulerAngles.y,transform.localEulerAngles.z) ;
         //transform.localEulerAngles = output;
+    }
+    void ZeroLever()
+    {
+        if (timeLeft < timeToZero)
+        {
+            timeLeft += Time.fixedDeltaTime;
+        }
+        float timeLeftPercent = timeLeft / timeToZero;
+        Vector3 neutralPoint = new Vector3(0.175f, 0, 0.125f);
+        Vector3 reduceOutput = Vector3.Lerp(output, neutralPoint, timeLeftPercent);
+        output.x= reduceOutput.x;
+        output.z = reduceOutput.z;
     }
 }
