@@ -11,6 +11,8 @@ public class GimballControl : MonoBehaviour
     public float yawSens;
     public float pitchSens;
     private Vector3 filteredRotationValues;
+    public bool swapGimbalStrafe;
+    Vector3 cockpitCommand;
 
 
     //local x = forward
@@ -38,9 +40,18 @@ public class GimballControl : MonoBehaviour
     public void GimballMovement()
     {
        FilterValues();
-       transform.RotateAround(transform.position, transform.up , filteredRotationValues.y);
-       transform.RotateAround(transform.position, transform.forward, filteredRotationValues.z);
-       transform.RotateAround(transform.position, transform.right, filteredRotationValues.x);
+        if (swapGimbalStrafe)
+        {
+            transform.RotateAround(transform.position, transform.up, filteredRotationValues.y);
+            transform.RotateAround(transform.position, transform.forward, filteredRotationValues.z);
+            transform.RotateAround(transform.position, transform.right, filteredRotationValues.x);
+        }
+        if (!swapGimbalStrafe)
+        {
+            transform.RotateAround(transform.position, transform.up, -filteredRotationValues.z);
+            transform.RotateAround(transform.position, transform.forward, -filteredRotationValues.y);
+            transform.RotateAround(transform.position, transform.right, filteredRotationValues.x);
+        }
     }
     public void FilterValues()
     {
@@ -48,7 +59,7 @@ public class GimballControl : MonoBehaviour
         //convert y pull on lever from 0,1 to -1 to 1
         rightPull -= 0.5f;
         rightPull *= 2f;
-        Vector3 cockpitCommand = new Vector3((rightPull * -1) * pitchSens, cockpitManager.leftRotate * yawSens, cockpitManager.rightRotate * rollSens);
+        cockpitCommand = new Vector3((rightPull * -1) * pitchSens, cockpitManager.leftRotate * yawSens, cockpitManager.rightRotate * rollSens);
         filteredRotationValues =  cockpitCommand * Time.deltaTime;
     }
 
