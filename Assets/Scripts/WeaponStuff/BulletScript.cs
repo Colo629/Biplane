@@ -26,9 +26,9 @@ public class BulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        worldVelocity = transform.forward * velocity;
+       /* worldVelocity = transform.forward * velocity;
         //calculateBullet();
-        startTime = Time.time;
+        startTime = Time.time;*/
     }
 
     public virtual void SpinUpProjectile(Vector3 inheretedVelocity, float skippedTime = 0)
@@ -36,6 +36,7 @@ public class BulletScript : MonoBehaviour
         worldVelocity = (transform.forward * velocity) + inheretedVelocity;
         skipTime = skippedTime;
         //calculateBullet();
+        startTime = Time.time;
     }
 
     // Update is called once per frame
