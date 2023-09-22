@@ -48,8 +48,8 @@ public class GimballControl : MonoBehaviour
         }
         if (!swapGimbalStrafe)
         {
-            transform.RotateAround(transform.position, transform.up, -filteredRotationValues.z);
-            transform.RotateAround(transform.position, transform.forward, -filteredRotationValues.y);
+            transform.RotateAround(transform.position, transform.up, -filteredRotationValues.z); //yaw
+            transform.RotateAround(transform.position, transform.forward, -filteredRotationValues.y); //roll
             transform.RotateAround(transform.position, transform.right, filteredRotationValues.x);
         }
     }
