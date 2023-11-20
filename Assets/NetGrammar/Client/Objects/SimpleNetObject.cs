@@ -6,7 +6,7 @@ namespace NetGrammar.Client.Objects
 {
     public class SimpleNetObject : MonoBehaviour
     {
-        public int ID { get; private set; }
+        public int ID;
         public bool isMaster;
         private float sendTime = 10f;
         private void Awake()
@@ -16,6 +16,10 @@ namespace NetGrammar.Client.Objects
         
         public virtual void SetPosition(Vector3 position, int movementType = 0)
         {
+            if(isMaster == true)
+            {
+                return;
+            }
             transform.position = position;
         }
 

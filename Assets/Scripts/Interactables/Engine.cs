@@ -15,6 +15,7 @@ public class Engine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //this code is garbage
         if(bs.buttonPressed == true)
         {
             cm.engineOn = true;

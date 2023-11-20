@@ -11,7 +11,7 @@ namespace NetGrammar
 {
     public static class NetDefs
     {
-        public const string ServerAddressString = "192.168.0.52";
+        public const string ServerAddressString = "192.168.0.143";
         public static readonly IPAddress ServerAddress = IPAddress.Parse(ServerAddressString); 
         public const int GeneralPortTCP = 19885;
         public const int GeneralPortUDP = 19880;
@@ -49,6 +49,7 @@ namespace NetGrammar
             
             SinglePosition = 350,
             DoublePosition = 351,
+            Balling = 360,
 
         }
         
