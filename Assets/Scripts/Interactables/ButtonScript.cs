@@ -36,6 +36,7 @@ public class ButtonScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (Time.time < lastFlipTime + flipDelay) { return; }
+        lastFlipTime = Time.time;
         if (buttonPressed == false)
         {
             buttonPressed = true;
