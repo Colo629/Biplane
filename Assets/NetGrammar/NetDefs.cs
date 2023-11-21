@@ -50,6 +50,7 @@ namespace NetGrammar
             SinglePosition = 350,
             DoublePosition = 351,
             Balling = 360,
+            ResetScene = 1337,
 
         }
         

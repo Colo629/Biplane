@@ -88,6 +88,7 @@ namespace NetGrammar.Server
             /// </summary>
             public void StartListen()
             {
+                Listener.ExclusiveAddressUse = false;
                 Listener.Start();
                 ListenThread = new Thread(ListenLoop);
                 ListenThread.Start();
