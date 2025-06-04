@@ -13,23 +13,23 @@ public class GunScript : MonoBehaviour
     public AudioSource ap = null;
 
     public string debugFireButton = "DebugFire";
-    private float lastFiredTime;
+    protected float lastFiredTime;
     public bool firing;
     
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         ap = transform.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         CheckForFire();
     }
 
-    public virtual void CheckForFire()
+    protected virtual void CheckForFire()
     {
         float fireDelay = 1 / (fireRPM / 60);
         float timeSinceFired = Time.time - lastFiredTime;
@@ -44,8 +44,8 @@ public class GunScript : MonoBehaviour
                 ammo -= 1;
                 lastFiredTime = Time.time;
                 Debug.Log(skippedTime);
-                if (firing != true) { firing = true; fireGun(0); break; }
-                else { fireGun(skippedTime); }
+                if (firing != true) { firing = true; FireGun(0); break; }
+                else { FireGun(skippedTime); }
             }
         }
         else
@@ -54,7 +54,8 @@ public class GunScript : MonoBehaviour
             ap.loop = false;
         }
     }
-    public void fireGun(float skippedTime)
+
+    protected void FireGun(float skippedTime)
     {
             Quaternion aimVector = Quaternion.RotateTowards(transform.rotation, Random.rotation, dispersionValue);
             BulletScript instBullet = Instantiate(bullet, transform.position, aimVector).GetComponent<BulletScript>();
